@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</title>
+</head>
+<body>
+  <input type="number" min="0" onkeyup="calculateFee(this.value)" id="minute">
+  <label for="minute">Thời gian đã gọi theo phút</label>
+  <h2></h2>
+  <script>
+    function calculateFee(value) {
+
+      let fee = 0;
+      if (value < 10) {
+        fee = value * 10000;
+      } else if (value < 5) {
+        fee = value * 15000;
+      } else {
+        fee = value * 20000;
+      }
+
+      document.querySelector('h2').innerText = `Cước ${fee} VND`;
+    }
+  </script>
+</body>
+</html>
