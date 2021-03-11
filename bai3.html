@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</title>
+</head>
+<body>
+
+  <script>
+    const number = parseInt(prompt('Nhap so nguyen bat ki'));
+
+    if (!isNaN(number)) {
+      if (number > 1) {
+        document.write('<h4>Lon hon 10</h4>');
+      } else {
+        document.write('<h4>Nho hon 10</h4>');
+      }
+    } else {
+      document.write('<h4>Kiem tra so da nhap</h4>')
+    }
+
+  </script>
+</body>
+</html>
