@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+  <script>
+    const kiemTra = parseInt(prompt('Kiem Tra'));
+    const giuaKi = parseInt(prompt('Giua Ki'));
+    const cuoiKi = parseInt(prompt('Cuoi Ki'));
+
+    if (isNaN(kiemTra) && isNaN(giuaKi) && isNaN(cuoiKi)) {
+      alert('Kiem tra lai so da nhap');
+    } else {
+      const trungBinh = (kiemTra*15 + giuaKi*35 + cuoiKi*50)/100;
+
+      xepLoai(trungBinh);
+    }
+
+    function xepLoai(trungBinh) {
+      if (trungBinh > 8) {
+        alert('Hoc Luc Gioi');
+      } else if (trungBinh > 5) {
+        alert('Hoc Luc Kha');
+      } else {
+        alert('Hoc Luc Yeu');
+      }
+    }
+  </script>
+</body>
+</html>
