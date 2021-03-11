@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</title>
+</head>
+<body>
+  <input type="number" min="0" onkeyup="printCommission(this)" id="revenue">
+  <label for="revenue">Revenue in million USD</label>
+  <h4></h4>
+  <script>
+    function printCommission(input) {
+      document.querySelector('h4').innerText = calculateCommission(input.value);
+    }
+
+    function calculateCommission(input) {
+      let commission = 0;
+      if (input > 10) {
+        commission = input * 50;
+      } else if (input > 4) {
+        commission = input * 20;
+      } else {
+        commission = input * 10;
+      }
+
+      return commission / 100 + ' million USD';
+    }
+  </script>
+</body>
+</html>
