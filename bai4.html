@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</title>
+</head>
+<body>
+  <script>
+    const num1 = parseInt(prompt('So thu 1'));
+    const num2 = parseInt(prompt('So thu 2'));
+    const num3 = parseInt(prompt('So thu 3'));
+
+    if (isNaN(num1) && isNaN(num2) && isNaN(num3)) {
+      alert('Kiem tra lai so da nhap');
+    } else {
+      console.log(1);
+      if (num1 > num2 && num1 > num3) {
+        alert('So lon nhat la ' + num1);
+      } else if (num2 > num1 && num2 > num3) {
+        alert('So lon nhat la ' + num2);
+      } else {
+        alert('So lon nhat la ' + num3);
+      }
+    }
+  </script>
+</body>
+</html>
